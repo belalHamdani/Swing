@@ -35,7 +35,7 @@ public class Example4 implements ActionListener {
     private void prepareGUI() {
         mainFrame = new JFrame("Belal Learning SWING");
         mainFrame.setSize(WIDTH, HEIGHT);
-        mainFrame.setLayout(new BorderLayout());
+        mainFrame.setLayout(new GridLayout(3,3));
 
 
         //menu at top
@@ -62,7 +62,7 @@ public class Example4 implements ActionListener {
             }
         });
         controlPanel = new JPanel();
-        controlPanel.setLayout(new GridLayout(2,3)); //set the layout of the pannel
+        controlPanel.setLayout(new BorderLayout()); //set the layout of the pannel
 
         mainFrame.add(controlPanel);
         //mainFrame.add(statusLabel);
@@ -74,22 +74,32 @@ public class Example4 implements ActionListener {
         JButton okButton = new JButton("OK");
         JLabel submitLabel = new JLabel("Submit");
         JButton cancelButton = new JButton("Cancel");
-        JLabel tickaLabel = new JLabel("ticka");
+        JButton tickaButton = new JButton("ticka");
         JButton LButton = new JButton("L");
         JButton snoozeButton = new JButton("snooze");
+        JButton stopButton = new JButton("stop");
+        JButton upButton = new JButton("up");
+        JButton downButton = new JButton("down");
+        JButton rightButton = new JButton("right");
 
         okButton.setActionCommand("OK");
 
         cancelButton.setActionCommand("Cancel");
 
 
-        mainFrame.add(FreeButton, BorderLayout.NORTH);
-        controlPanel.add(LButton);
-        controlPanel.add(submitLabel);
-        controlPanel.add(okButton);
-        controlPanel.add(tickaLabel);
-        controlPanel.add(cancelButton);
-        mainFrame.add(snoozeButton, BorderLayout.SOUTH);
+        mainFrame.add(FreeButton);
+        mainFrame.add(LButton);
+        controlPanel.add(submitLabel , BorderLayout.CENTER);
+        mainFrame.add(okButton);
+        mainFrame.add(tickaButton);
+        mainFrame.add(controlPanel);
+        mainFrame.add(cancelButton);
+        mainFrame.add(snoozeButton);
+        mainFrame.add(stopButton);
+        mainFrame.add(upButton);
+        controlPanel.add(downButton, BorderLayout.SOUTH);
+        controlPanel.add(rightButton, BorderLayout.EAST);
+
 
 
         mainFrame.setVisible(true);
