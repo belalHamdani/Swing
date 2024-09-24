@@ -70,20 +70,20 @@ public class Example4 implements ActionListener {
     }
 
     private void showEventDemo() {
-        JButton OneButton = new JButton("One");
+        JButton FreeButton = new JButton("Free");
         JButton okButton = new JButton("OK");
         JLabel submitLabel = new JLabel("Submit");
         JButton cancelButton = new JButton("Cancel");
-        JLabel tickaLabel = new JLabel("why");
+        JLabel tickaLabel = new JLabel("ticka");
         JButton LButton = new JButton("L");
-        JButton snoozeButton = new JButton("TD");
+        JButton snoozeButton = new JButton("snooze");
 
         okButton.setActionCommand("OK");
 
         cancelButton.setActionCommand("Cancel");
 
 
-        mainFrame.add(OneButton, BorderLayout.NORTH);
+        mainFrame.add(FreeButton, BorderLayout.NORTH);
         controlPanel.add(LButton);
         controlPanel.add(submitLabel);
         controlPanel.add(okButton);
